@@ -1,0 +1,18 @@
+.loading {
+    background-color: #151515;
+    @include centering;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1005;
+    .load-element {
+        background-color: transparent;
+        @include same-scale(65px);
+        border: 5px solid;
+        border-color: var(--c-yellow-main) #4a3b1e1a var(--c-yellow-main) #4a3b1e1a;
+        @include prefixer(border-radius, 50%);
+        @include animation(load, 1s infinite linear);
+    }
+}
